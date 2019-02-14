@@ -1,0 +1,51 @@
+{
+  "name": "reactjs-typescript-start",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "mkdir -p build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && browserify --debug -o public/app.js ./build",
+    "server": "http-server -c-1 ./public",
+    "watch": "watchify -v --debug -o public/app.js ./build",
+    "tsc": "tsc"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.1",
+    "@types/react-redux": "^7.0.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "typescript": "^3.3.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.3",
+    "http-server": "^0.11.1",
+    "watchify": "^3.11.0"
+  },
+  "browser": "src/index.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "env",
+            "react"
+          ],
+          "plugins": [
+            "transform-object-rest-spread"
+          ]
+        }
+      ]
+    ]
+  }
+}
