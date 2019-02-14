@@ -1,6 +1,6 @@
 # README
 
-reactjs-start is a basic ReactJS-Startproject including browserify for bundling and http-server for development.
+reactjs-typescript-start is a basic ReactJS-Startproject using typescript including browserify for bundling and http-server for development. I have also a repository reactjs-start without typescript.
 
 ## First Steps
 Clone this repository and run `npm install` to get all dependencies.
